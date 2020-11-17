@@ -6,6 +6,10 @@
 //It is possible to display five contacts at the same time.
 //The parameters are stored as follows: name,thID,name,thID,name,thID,name,thID,name,thID
 //Example: ECHOECHO,ECHOECHO,Threema.ch,*THREEMA,Support,*SUPPORT,MyData,*MY3DATA,Reg-Bawü,*REGBAWU
+//Don't change here anything. This content will used for the Widget preview.
+//You can put five contacts in this widget. 
+//The Parameter has to put like this: name,thID,name,thID,name,thID,name,thID,name,thID
+//Example: ECHOECHO,ECHOECHO,Threema.ch,*THREEMA,Support,*SUPPORT,MyData,*MY3DATA,Reg-Bawü,*REGBAWU
 
 let name =[];
 let thID =[];
@@ -21,7 +25,7 @@ name[8] = "Nico";
 thID[9] = "*REGBAWU";
 
 if (!config.runsInWidget) {
-    //This content can you see online in the Scriptable App. 
+    
     name[0];
     thID[1];
     name[2];
@@ -32,31 +36,31 @@ if (!config.runsInWidget) {
     thID[7];
     name[8];
     thID[9];
-
+    
 } else {
 
 const params = args.widgetParameter ? args.widgetParameter.split(",") : undefined
 
-    name[0] = params[0] //Parameter Name for the contact.
-    thID[1] = params[1] //Parameter Threema ID for the Widget. 
+    name[0] = params[0]
+    thID[1] = params[1] //4 Parameter für das Widget können hinterlegt werden. 
     name[2] = params[2]
-    thID[3] = params[3] 
+    thID[3] = params[3] //Parameter für das Widget
     name[4] = params[4]
-    thID[5] = params[5] 
+    thID[5] = params[5] //Parameter für das Widget
     name[6] = params[6]
-    thID[7] = params[7] 
+    thID[7] = params[7] //Parameter für das Widget
     name[8] = params[8]
     thID[9] = params[9] 
+ 
   }
-// URL Link for Threema contact
+// URL Link
 let url = [];
 url[0] = "https://threema.id/";
 url[1] = "?text=";
 
-// Images for the contacts
+// Images for the Contacts; Copyright 2020 by "netzpython27"
 let contactURL = "https://image.flaticon.com/icons/png/512/2279/2279178.png";
 
-//Get Image for the contact 
 let contactImg = await getImage(contactURL);
 
 //Parameter for the Widget
@@ -64,50 +68,55 @@ let widget = new ListWidget()
 
 widget.setPadding(10, 10, 10, 10)
 widget.spacing = 5
-widget.backgroundColor = Color.dynamic(Color.white(), Color.black())//Dark und Light Mode 
+widget.backgroundColor = Color.dynamic(Color.white(), Color.black())
 const widgettitle = widget.addText("Favouriten Threema") //Title of the Widget
-widgettitle.textColor = Color.brown()
+widgettitle.textColor = Color.dynamic(Color.green(),Color.orange())
 widgettitle.centerAlignText()
-widgettitle.font = Font.boldSystemFont(20)
+widgettitle.font = //Font.boldSystemFont(20)
+Font.semiboldMonospacedSystemFont(20)
 widget.addSpacer(4)
 
 let row = widget.addStack()
 
-//List with all five Threema Contacts
+row.addSpacer(10)//Helps to centralice the image
+//Add Contacts
 addContact(
-    contactImg, //Contact Image
-    name[0], //and his name.
+  contactImg,
+  name[0], //and his name.
     url[0] + thID[1] + url[1], //URL Shortcut to the contact
-    row)
-row.addSpacer(10)
+  row)
+
+row.addSpacer(10)//Helps to centralice the image
 
 addContact(
-    contactImg,
-    name[2],
-    url[0] + thID[3] + url[1],
-    row)
-row.addSpacer(10)
+  contactImg,
+  name[2],
+  url[0] + thID[3] + url[1],
+  row)
+row.addSpacer(10)//Helps to centralice the image
 
 addContact(
-    contactImg,
-    name[4],
-    url[0] + thID[5] + url[1],
-    row)
-row.addSpacer(10)
+  contactImg,
+  name[4],
+  url[0] + thID[5] + url[1],
+  row)
+
+  row.addSpacer(10)//Helps to centralice the image
 
 addContact(
     contactImg,
     name[6],
     url[0] + thID[7] + url[1],
     row)
- row.addSpacer(10) 
+
+ row.addSpacer(10)//Helps to centralice the image
 
 addContact(
     contactImg,
     name[8],
     url[0] + thID[9] + url[1],
     row)
- row.addSpacer(10) 
+ row.addSpacer(10)//Helps to centralice the image
 
 widget.presentMedium()
 
@@ -119,6 +128,7 @@ function addContact(img, name, link, r) {
   let wimg = stack.addImage(img)
   wimg.cornerRadius = 4
   stack.addSpacer(4)
+  
   
   let widgetname = stack.addText(name)
   widgetname.centerAlignText()
