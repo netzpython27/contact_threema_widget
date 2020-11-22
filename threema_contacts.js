@@ -59,7 +59,7 @@ url[0] = "https://threema.id/";
 url[1] = "?text=";
 
 // Images for the Contacts; Copyright 2020 by "netzpython27"
-let contactURL = "https://image.flaticon.com/icons/png/512/2279/2279178.png";
+let contactURL = "https://i.ibb.co/J37X17S/messagephone.png";
 
 let contactImg = await getImage(contactURL);
 
