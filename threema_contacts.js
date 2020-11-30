@@ -3,11 +3,10 @@
 // icon-color: deep-blue; icon-glyph: magic;
 
 //Please change here only something, if you already know what you do. This content will be used for the Widget preview in Scriptable.
-//It is possible to display five contacts at the same time.
+//It is possible to display five contacts at the same time. You have to put five contacts in this widget know. I will correct that later, if I have more time. ;-)
 //The parameters are stored as follows: name,thID,name,thID,name,thID,name,thID,name,thID
 //Example: ECHOECHO,ECHOECHO,Threema.ch,*THREEMA,Support,*SUPPORT,MyData,*MY3DATA,Reg-Bawü,*REGBAWU
 //Don't change here anything. This content will used for the Widget preview.
-//You can put five contacts in this widget. 
 //The Parameter has to put like this: name,thID,name,thID,name,thID,name,thID,name,thID
 //Example: ECHOECHO,ECHOECHO,Threema.ch,*THREEMA,Support,*SUPPORT,MyData,*MY3DATA,Reg-Bawü,*REGBAWU
 
@@ -72,8 +71,7 @@ widget.backgroundColor = Color.dynamic(Color.white(), Color.black())
 const widgettitle = widget.addText("Favouriten Threema") //Title of the Widget
 widgettitle.textColor = Color.dynamic(Color.green(),Color.orange())
 widgettitle.centerAlignText()
-widgettitle.font = //Font.boldSystemFont(20)
-Font.semiboldMonospacedSystemFont(20)
+widgettitle.font = Font.semiboldMonospacedSystemFont(20)
 widget.addSpacer(4)
 
 let row = widget.addStack()
@@ -128,8 +126,7 @@ function addContact(img, name, link, r) {
   let wimg = stack.addImage(img)
   wimg.cornerRadius = 4
   stack.addSpacer(4)
-  
-  
+   
   let widgetname = stack.addText(name)
   widgetname.centerAlignText()
   widgetname.font = Font.semiboldRoundedSystemFont(14)
