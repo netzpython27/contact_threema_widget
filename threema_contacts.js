@@ -68,7 +68,7 @@ let widget = new ListWidget()
 widget.setPadding(10, 10, 10, 10)
 widget.spacing = 5
 widget.backgroundColor = Color.dynamic(Color.white(), Color.black())
-const widgettitle = widget.addText("Favouriten Threema") //Title of the Widget
+const widgettitle = widget.addText("Favoriten Threema") //Title of the Widget
 widgettitle.textColor = Color.dynamic(Color.green(),Color.orange())
 widgettitle.centerAlignText()
 widgettitle.font = Font.semiboldMonospacedSystemFont(20)
