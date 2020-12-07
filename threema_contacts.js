@@ -69,7 +69,7 @@ widget.setPadding(10, 10, 10, 10)
 widget.spacing = 5
 widget.backgroundColor = Color.dynamic(Color.white(), Color.black())
 const widgettitle = widget.addText("Favoriten Threema") //Title of the Widget
-widgettitle.textColor = Color.dynamic(Color.green(),Color.orange())
+widgettitle.textColor = Color.dynamic(Color.red(),Color.yellow())
 widgettitle.centerAlignText()
 widgettitle.font = Font.semiboldMonospacedSystemFont(20)
 widget.addSpacer(4)
@@ -130,7 +130,7 @@ function addContact(img, name, link, r) {
   let widgetname = stack.addText(name)
   widgetname.centerAlignText()
   widgetname.font = Font.semiboldRoundedSystemFont(14)
-  widgetname.textColor = Color.orange()
+  widgetname.textColor = Color.dynamic(Color.black(),Color.orange())
   stack.addSpacer(4)
 }
 
