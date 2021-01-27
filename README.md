@@ -9,8 +9,8 @@ How to use it:
 
 1. First you have to install the iOS App Scriptable App from here: https://apps.apple.com/de/app/scriptable/id1405459188
 2. Open the App on your phone and copy the JavaScript code from here inside and give it a speakable name. 
-3. Almost finshed. Now you have to set with the "+" a widget on your screen and choose the Scriptable App.
+3. Almost finished. Now you have to set with the "+" a widget on your screen and choose the Scriptable App.
 4. Search the name and choose the "medium" size.
-5. Put five contacts with shortname and Threema ID and seperate them with a ",".
+5. Put up to five contacts with shortname and Threema ID and separate them with a ",".
 6. Now your are finished. 
 7. Have fun to play with it. 

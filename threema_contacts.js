@@ -3,12 +3,10 @@
 // icon-color: deep-blue; icon-glyph: magic;
 
 //Please change here only something, if you already know what you do. This content will be used for the Widget preview in Scriptable.
-//It is possible to display five contacts at the same time. You have to put five contacts in this widget know. I will correct that later, if I have more time. ;-)
-//The parameters are stored as follows: name,thID,name,thID,name,thID,name,thID,name,thID
-//Example: ECHOECHO,ECHOECHO,Threema.ch,*THREEMA,Support,*SUPPORT,MyData,*MY3DATA,Reg-Bawü,*REGBAWU
+//It is possible to display up to five contacts.
+//Parameters: [Name, ThreemaID]...
+//Example: ECHO,ECHOECHO,Threema.ch,*THREEMA,Support,*SUPPORT,MyData,*MY3DATA,Reg-Bawü,*REGBAWU
 //Don't change here anything. This content will used for the Widget preview.
-//The Parameter has to put like this: name,thID,name,thID,name,thID,name,thID,name,thID
-//Example: ECHOECHO,ECHOECHO,Threema.ch,*THREEMA,Support,*SUPPORT,MyData,*MY3DATA,Reg-Bawü,*REGBAWU
 
 /** @type {{id:string, name:string}[]} */
 const contacts = []
