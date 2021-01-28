@@ -22,9 +22,7 @@ if (!config.runsInWidget) {
 
 let i = 0
 while (i + 1 < params.length && i < 2 * 5) { // adds up to 5 contacts
-  const name = params[i]
-  const id = i + 1 < params.length ? params[i + 1] : name
-  contacts.push({ id: id, name: name })
+  contacts.push({ name: params[i], id: params[i + 1] })
   i += 2
 }
 
